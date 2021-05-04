@@ -1,3 +1,3 @@
-### kku-Notes-App
+# kku-Notes-App
 
-# Connection of front-end to the back-end.
+### Connection of front-end to the back-end.
