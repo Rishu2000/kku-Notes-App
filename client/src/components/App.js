@@ -14,12 +14,16 @@ function App() {
         <div className="row">
           <div className="col-12">
             <p>{user?`User Loged In  as ${user}`:"User Loged Out"}</p>
-            <div className="Button btn btn-primary"
-              onClick={(e) => {setUser("Rishav")}}
-            >LogIn</div>
-            <div className="Button btn btn-secondary ml-3"
-              onClick={(e) => {setUser(null)}}
-            >LogOut</div>
+            <button className="Button btn btn-primary"
+              onClick={(e) => {
+                e.preventDefault();
+                setUser("Rishav")}}
+            >LogIn</button>
+            <button className="Button btn btn-secondary ml-3"
+              onClick={(e) => {
+                e.preventDefault();
+                setUser(null)}}
+            >LogOut</button>
           </div>
         </div>
       </div>
