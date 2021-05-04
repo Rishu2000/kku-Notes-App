@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import Header from "./Header";
+import Welcome from "../components/Welcome/Welcome"
+import Login from "../components/Login/Login"
 
 function App() {
 
@@ -13,17 +15,7 @@ function App() {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <p>{user?`User Loged In  as ${user}`:"User Loged Out"}</p>
-            <button className="Button btn btn-primary"
-              onClick={(e) => {
-                e.preventDefault();
-                setUser("Rishav")}}
-            >LogIn</button>
-            <button className="Button btn btn-secondary ml-3"
-              onClick={(e) => {
-                e.preventDefault();
-                setUser(null)}}
-            >LogOut</button>
+            <p>{user?<Welcome/>:<Login/>}</p>
           </div>
         </div>
       </div>
