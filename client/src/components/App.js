@@ -6,6 +6,7 @@ import Login from "../components/Login/Login"
 function App() {
 
   const [user, setUser] = useState(null);
+  const [error,setError] = useState(null);
   
   handleAuth = (username,password) => {
     const Users = {
@@ -13,14 +14,20 @@ function App() {
       Rishav:"dark123",
       rishu:"ris123"
     }
-    if(Users[username]){
+    if(!Users[username]){
       //User Dosen't exists
+      setUser(null);
+      setError("User not found");
     }
     else if(Users[username] !== password){
       //Password is incorrect
+      setUser(null);
+      setError("Password is Incorrect");
     }
     else {
       //Every thing is fine.
+      setUser(username);
+      setError(null);
     }
   }
 
