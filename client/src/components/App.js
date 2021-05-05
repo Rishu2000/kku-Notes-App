@@ -7,6 +7,23 @@ function App() {
 
   const [user, setUser] = useState(null);
   
+  handleAuth = (username,password) => {
+    const Users = {
+      Praveen:"Hello123",
+      Rishav:"dark123",
+      rishu:"ris123"
+    }
+    if(Users[username]){
+      //User Dosen't exists
+    }
+    else if(Users[username] !== password){
+      //Password is incorrect
+    }
+    else {
+      //Every thing is fine.
+    }
+  }
+
   return (
     <div className="App">
       <Header dark={true} className="Header">
