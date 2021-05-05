@@ -15,7 +15,17 @@ function App() {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <p>{user?<Welcome/>:<Login/>}</p>
+            <p>{user?<Welcome user={user}/>:<Login/>}</p>
+            <button className="btn btn-primary"
+              onClick={(e) => {
+                e.preventDefault();
+                setUser("Rishav")}}
+            >LogIn</button>
+            <button className="btn btn-secondary ml-3"
+              onClick={(e) => {
+                e.preventDefault();
+                setUser(null)}}
+            >LogOut</button>
           </div>
         </div>
       </div>
