@@ -8,7 +8,7 @@ function App() {
   const [user, setUser] = useState(null);
   const [error,setError] = useState(null);
   
-  handleAuth = (username,password) => {
+  const handleAuth = (username,password) => {
     const Users = {
       Praveen:"Hello123",
       Rishav:"dark123",
@@ -39,18 +39,7 @@ function App() {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <p>{user?<Welcome user={user}/>:<Login/>}</p>
-            {!user && (<button className="btn btn-primary"
-              onClick={(e) => {
-                e.preventDefault();
-                setUser("Rishav")}}
-            >LogIn</button>)}
-            {user && 
-            (<button className="btn btn-secondary ml-3"
-              onClick={(e) => {
-                e.preventDefault();
-                setUser(null)}}
-            >LogOut</button>)}
+            <p>{user?<Welcome user={user}/>:<Login handleAuth={handleAuth}/>}</p>
           </div>
         </div>
       </div>
