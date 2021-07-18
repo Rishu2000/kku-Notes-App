@@ -32,6 +32,11 @@ function App() {
     }
   }
 
+  const handleLogout = () => {
+    setUser(null);
+    setError(null);
+  }
+
   return (
     <div className="App">
       <Header dark={true} className="Header">
@@ -40,7 +45,7 @@ function App() {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <p>{user?<Welcome user={user}/>:<Login handleAuth={handleAuth} error={error}/>}</p>
+            <p>{user?<Welcome user={user} handleLogout={handleLogout}/>:<Login handleAuth={handleAuth} error={error}/>}</p>
           </div>
         </div>
       </div>
