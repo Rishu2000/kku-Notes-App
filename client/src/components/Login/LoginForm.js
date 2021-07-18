@@ -12,7 +12,7 @@ const LoginForm = ({handleAuth}) => {
     }
 
     return (
-        <form className="LoginForm" onSubmit={handleSubmit}>
+        <form className="LoginForm" onSubmit={handleSubmit}>       {/**Purpose of using onSubmit is when we click enter it will triger. */}
             {[
                 {
                     Id: 'Username',
