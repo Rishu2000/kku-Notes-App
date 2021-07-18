@@ -40,7 +40,7 @@ function App() {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <p>{user?<Welcome user={user}/>:<Login handleAuth={handleAuth}/>}</p>
+            <p>{user?<Welcome user={user}/>:<Login handleAuth={handleAuth} error={error}/>}</p>
           </div>
         </div>
       </div>

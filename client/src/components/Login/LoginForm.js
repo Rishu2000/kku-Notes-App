@@ -1,18 +1,22 @@
 import React, {useState} from 'react'
 import FormGroup from '../form/FormGroup'
 
-const LoginForm = ({handleAuth}) => {
+const LoginForm = ({handleAuth, error}) => {
 
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
 
     const handleSubmit = (e) => {
-        // e.preventDefault();
+        e.preventDefault();
         handleAuth(username, password);
     }
 
     return (
         <form className="LoginForm" onSubmit={handleSubmit}>       {/**Purpose of using onSubmit is when we click enter it will triger. */}
+            <h2>Login</h2>
+            {error && (
+                <div className="alert alert-danger">{error}</div>
+            )}
             {[
                 {
                     Id: 'Username',
