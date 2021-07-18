@@ -7,7 +7,7 @@ const LoginForm = ({handleAuth}) => {
     const [password, setPassword] = useState('')
 
     const handleSubmit = (e) => {
-        e.preventDefault();
+        // e.preventDefault();
         handleAuth(username, password);
     }
 
