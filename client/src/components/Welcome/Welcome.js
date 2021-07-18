@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import List from './List'
+import WelcomeHeader from './WelcomeHeader'
 
 class Welcome extends Component {
     state = {
@@ -13,14 +14,7 @@ class Welcome extends Component {
         const {user, handleLogout} = this.props;
         return (
             <div className="container">
-                <div className="row">
-                    <div className="col-12">
-                        <p className="mb-1">Welcome, {user}</p>
-                        <button className="btn btn-danger" onClick={handleLogout}>
-                            Logout
-                        </button>
-                    </div>
-                </div>
+                <WelcomeHeader user={user} handleLogout={handleLogout}/>
                 <div className="row mt-3">
                     <div className="col-3">
                         <List Notes={this.state.Notes} 
