@@ -9,6 +9,7 @@ function App() {
   const [error,setError] = useState(null);
   
   const handleAuth = (username,password) => {
+    console.log(`${username} and ${password}`)
     const Users = {
       Praveen:"Hello123",
       Rishav:"dark123",
