@@ -1,14 +1,19 @@
 import React from 'react'
+import {Switch, Route, withRouter} from 'react-router-dom'
 
-const Note = ({currentNote}) => {
+const Note = ({currentNote, ...props}) => {
     return (
-        <div>
-          {currentNote !== null?
-                "You are looking at Note #" + (currentNote + 1):
-                "Click on a note from left side."
-            }  
-        </div>
+        <Switch>
+            <Route path="/" exact={true}>
+                Select something from Left.
+            </Route>
+            <Route path="/:NoteID">
+                <pre className="border rounded p-1 bg-light">
+                    {JSON.stringify(props,null,2)}
+                </pre>
+            </Route>
+        </Switch>
     )
 }
 
-export default Note
+export default withRouter(Note)
