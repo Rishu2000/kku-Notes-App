@@ -1,7 +1,7 @@
 import React from 'react'
 import {Switch, Route, withRouter} from 'react-router-dom'
 
-const Note = ({currentNote, ...props}) => {
+const Note = ({...props}) => {
     return (
         <Switch>
             <Route path="/" exact={true}>
