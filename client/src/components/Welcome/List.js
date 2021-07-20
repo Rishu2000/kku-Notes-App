@@ -5,14 +5,14 @@ const List = ({Notes, match}) => (
     <>
         <h3>Notes List</h3>
         <div className="list-group">
-            {Notes.map((item,key) => (
+            {Notes.map((note,key) => (
                 <Link
                 to={"note-"+key}
                 className={"list-group-item list-group-item-action" + 
                     ( match.params.NoteID === `note-${key}` ? " active" : "")}
                     key={key}
                 >
-                    {item}
+                    {note.Title}
                 </Link>
             ))}
         </div>
