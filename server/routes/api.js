@@ -2,8 +2,8 @@ const express = require('express');
 const app = express();
 const user = require('./user');
 
-app.use('/api',user);
-app.get('/api',(req, res) => {
+app.use('/user',user);
+app.get('/',(req, res) => {
     res.json("You are in /api module.")
 })
 

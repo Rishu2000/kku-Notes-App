@@ -13,7 +13,7 @@ app.use(session({
     saveUninitialized: true,
     cookie: { secure: false }
 }))
-app.use('/',api);
+app.use('/api',api);
 
 app.get('/', (req, res) => {
     res.json('Server has started.');
