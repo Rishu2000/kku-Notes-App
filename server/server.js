@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const morgan = require('morgan');
 const session = require('express-session');
+const api = require('./routes/api')
 const port = 3002;
 
 app.use(morgan("dev"));
@@ -12,6 +13,7 @@ app.use(session({
     saveUninitialized: true,
     cookie: { secure: false }
 }))
+app.use('/',api);
 
 app.get('/', (req, res) => {
     res.json('Server has started.');
