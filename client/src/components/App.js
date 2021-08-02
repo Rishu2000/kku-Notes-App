@@ -19,7 +19,7 @@ function App() {
       })
       .catch((err) => {
         setUser(null);
-        console.log(err)
+        console.dir(err)
         // setError(err);
       })
   }
