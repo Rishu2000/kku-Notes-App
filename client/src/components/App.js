@@ -11,9 +11,17 @@ function App() {
   const [error,setError] = useState(null);
   
   const handleAuth = (username,password) => {
-    console.log({username, password})
     // handleLogin(username, password).then((res) => {console.log(res)});
-    Axios.post('api/user/login',{username,password}).then((res) => {console.log(res)});
+    Axios.post('api/user/login',{username,password})
+      .then((res) => {
+        setUser(res.data.Message);
+        setError(null);
+      })
+      .catch((err) => {
+        setUser(null);
+        console.log(err)
+        // setError(err);
+      })
   }
 
   const handleLogout = () => {
