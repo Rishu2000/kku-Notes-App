@@ -32,6 +32,7 @@ function App() {
         setUser(null);
         setErrorAuth(null);
         setErrorReg(null);
+        setRegUser(null);
       })
       .catch((err) => {
         console.log(err)
