@@ -19,8 +19,7 @@ function App() {
       })
       .catch((err) => {
         setUser(null);
-        console.dir(err)
-        // setError(err);
+        setError(err.response.data.Message);
       })
   }
 
