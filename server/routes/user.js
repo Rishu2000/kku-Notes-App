@@ -54,13 +54,16 @@ app.post('/login',(req, res) => {
 app.post('/register',(req, res) => {
     const {username, password} = req.body;
     if(!username || !password) {
-        res.status(404).json("Please enter all the required fields.")
+        res.status(404).json({
+            Success: false,
+            Message: "Please enter all the required fields."
+        })
     }else{
         if(!Users[username]){
             Users[username] = password;
             res.status(201).json({
                 Success: true,
-                Message:"Successfully created."
+                Message:username
             })
         }else{
             res.status(409).json({
