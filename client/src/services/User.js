@@ -1,5 +1,5 @@
-import axios from 'axios';
+import Axios from 'axios';
 
-export default const handleLogin = (username, password) => {
-    axios.post('/api/user/login', {username, password});
+export const handleLogin = (username, password) => {
+    Axios.post('/api/user/login', {username, password});
 }

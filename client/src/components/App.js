@@ -1,5 +1,7 @@
 import React, {useState} from "react";
+import Axios from 'axios';
 import Header from "./Header";
+// import {handleLogin} from '../services/User'
 import Welcome from "../components/Welcome/Welcome"
 import Login from "../components/Login/Login"
 
@@ -9,27 +11,9 @@ function App() {
   const [error,setError] = useState(null);
   
   const handleAuth = (username,password) => {
-    console.log(`${username} and ${password}`)
-    const Users = {
-      Praveen:"Hello123",
-      Rishav:"dark123",
-      rishu:"ris123"
-    }
-    if(!Users[username]){
-      //User Dosen't exists
-      setUser(null);
-      setError("User not found");
-    }
-    else if(Users[username] !== password){
-      //Password is incorrect
-      setUser(null);
-      setError("Password is Incorrect");
-    }
-    else {
-      //Every thing is fine.
-      setUser(username);
-      setError(null);
-    }
+    console.log({username, password})
+    // handleLogin(username, password).then((res) => {console.log(res)});
+    Axios.post('api/user/login',{username,password}).then((res) => {console.log(res)});
   }
 
   const handleLogout = () => {
