@@ -46,7 +46,7 @@ app.post('/login',(req, res) => {
             req.session.Authentication = req.body;
             res.json({
                 Success: true,
-                Message: "User Loged In."
+                Message: username
             });
           }
     }
