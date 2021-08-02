@@ -18,6 +18,7 @@ function App() {
       .then((res) => {
         setUser(res.data.Message);
         setErrorAuth(null);
+        setErrorReg(null);
       })
       .catch((err) => {
         setUser(null);
@@ -30,6 +31,7 @@ function App() {
       .then((res) => {
         setUser(null);
         setErrorAuth(null);
+        setErrorReg(null);
       })
       .catch((err) => {
         console.log(err)
@@ -41,6 +43,7 @@ function App() {
       .then((res) => {
         setRegUser(res.data.Message);
         setErrorReg(null);
+        setErrorAuth(null);
       })
       .catch((err) => {
         setRegUser(null);
