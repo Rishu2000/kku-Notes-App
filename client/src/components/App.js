@@ -24,8 +24,14 @@ function App() {
   }
 
   const handleLogout = () => {
-    setUser(null);
-    setError(null);
+    Axios.get('/api/user/logout')
+      .then((res) => {
+        setUser(null);
+        setError(null);
+      })
+      .catch((err) => {
+        console.log(err)
+      })
   }
 
   return (
