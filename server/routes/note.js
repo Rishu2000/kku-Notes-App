@@ -5,17 +5,20 @@ const Notes = [
     {
         NoteID: "hello",
         Title: "Hello World",
-        Desc: "Hello World Hello World Hello World Hello World Hello World"
+        Desc: "Hello World Hello World Hello World Hello World Hello World",
+        User:"Rishav"
       },
       {
         NoteID: "faq",
         Title: "Frequently Asked Questions",
-        Desc: "What questions are you asking frequently"
+        Desc: "What questions are you asking frequently",
+        User:"Rishav"
       },
       {
         NoteID: "gfg",
         Title: "GeeksforGeeks",
-        Desc: "Hello GeeksforGeeks"
+        Desc: "Hello GeeksforGeeks",
+        User:"Rishav"
       }
 ]
 
