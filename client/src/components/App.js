@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Axios from 'axios';
 import Header from "./Header";
 // import {handleLogin} from '../services/User'
@@ -11,6 +11,12 @@ function App() {
   const [errorAuth,setErrorAuth] = useState(null);
   const [errorReg, setErrorReg] = useState(null);
   const [regUser, setRegUser] = useState(null);
+
+  useEffect(() => {
+    Axios.get('/api/user').then((res) => {
+      setUser(res.data);
+    })
+  }, [])
   
   const handleAuth = (username,password) => {
     // handleLogin(username, password).then((res) => {console.log(res)});

@@ -9,7 +9,7 @@ const Users = {
 app.get('/',(req, res) => {
     const {Authentication} = req.session;
     if(Authentication){
-        res.json(Users);
+        res.json(Authentication.username);
     }else{
         res.status(400).json("Please login to see.");
     }
