@@ -3,14 +3,14 @@ import {Switch, Route} from 'react-router-dom'
 import NoteContent from './NoteContent'
 import NoteWelcome from './NoteWelcome'
 
-const Note = ({ match, Notes}) => {
+const Note = ({ match, NotesApi}) => {
     return (
         <Switch>
             <Route path="/" exact={true} component={NoteWelcome}/>
             <Route path="/:NoteID"> 
             {/*  render={rp => <NoteContent {...rp} Notes={Notes}  />}*/}
                 {rp => (
-                    <NoteContent {...rp} Notes={Notes}  />
+                    <NoteContent {...rp} NotesApi={NotesApi}  />
                 )}
             </Route>
         </Switch>

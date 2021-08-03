@@ -1,11 +1,11 @@
 import React from 'react'
 import {Link, withRouter} from 'react-router-dom'   //withRouter
 
-const List = ({Notes, match}) => (
+const List = ({NotesApi, match}) => (
     <>
         <h3>Notes List</h3>
         <div className="list-group">
-            {Notes.map((note,key) => (
+            {NotesApi && NotesApi.map((note,key) => (
                 <Link
                 to={"note-"+key}
                 className={"list-group-item list-group-item-action" + 
