@@ -20,7 +20,12 @@ const Notes = [
 ]
 
 note.get('/',(req, res) => {
-    res.json(Notes);
+  const {Authentication} = req.session;
+    if(Authentication){
+      res.json(Notes);
+    }else{
+      res.status(404).json("Please login to see.");
+    }
 })
 
 module.exports = note;
