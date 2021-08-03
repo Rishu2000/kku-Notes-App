@@ -12,7 +12,6 @@ const Welcome = ({user, handleLogout}) => {
 
     useEffect(() => {
         Axios.get('api/note').then((res) => {
-            console.log(res);
             setNotesApi(res.data);
         })
     }, [])
