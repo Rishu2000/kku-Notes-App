@@ -18,7 +18,7 @@ const Notes = [
         NoteID: "gfg",
         Title: "GeeksforGeeks",
         Desc: "Hello GeeksforGeeks",
-        User:"Rishav"
+        User:"Praduman"
       }
 ]
 

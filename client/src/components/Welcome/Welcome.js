@@ -22,7 +22,7 @@ const Welcome = ({user, handleLogout}) => {
             <div className="row mt-3">
                 <Route path={['/:NoteID','/']}>
                     <div className="col-3">
-                        <List NotesApi={NotesApi} />
+                        <List NotesApi={NotesApi} user={user}/>
                     </div>
                     <div className="col-9">
                         <Note NotesApi={NotesApi} />

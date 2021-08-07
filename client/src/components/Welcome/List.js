@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {Link, withRouter} from 'react-router-dom'   //withRouter
 
-const List = ({NotesApi, match}) => {
+const List = ({NotesApi, match, user}) => {
 
     const [filter, setFilter] = useState("All");
 
@@ -27,7 +27,15 @@ const List = ({NotesApi, match}) => {
             ))}
         </div>
         <div className="list-group">
-            {NotesApi && NotesApi.map((note,key) => (
+            {NotesApi && NotesApi
+            .filter(note => {
+                if(filter === 'My Notes'){
+                    return note.User === user;
+                }else{
+                    return true;
+                }
+            })
+            .map((note,key) => (
                 <Link
                 to={"note-"+key}
                 className={"list-group-item list-group-item-action" + 
