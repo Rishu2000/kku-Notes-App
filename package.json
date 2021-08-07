@@ -1,23 +1,23 @@
 {
-  "name": "kku-notes-app",
+  "name": "server",
   "version": "1.0.0",
-  "engines": {
-    "node": "14.15.5"
-  },
-  "description": "",
-  "main": "server/server.js",
+  "description": "Backend of the Frontend!",
+  "main": "server.js",
   "scripts": {
-    "start": "node server/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Rishu2000/kku-Notes-App.git"
-  },
-  "author": "",
+  "keywords": [
+    "Node.js",
+    "Express.js",
+    "API"
+  ],
+  "author": "Rishav Kumar Shah",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Rishu2000/kku-Notes-App/issues"
-  },
-  "homepage": "https://github.com/Rishu2000/kku-Notes-App#readme"
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.12"
+  }
 }
