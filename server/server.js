@@ -3,7 +3,7 @@ const app = express();
 const morgan = require('morgan');
 const session = require('express-session');
 const api = require('./routes/api')
-const port = 3002;
+const port = process.env.PORT || 3002;
 
 app.use(morgan("dev"));
 app.use(express.json());
