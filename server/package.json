@@ -12,9 +12,6 @@
     "Express.js",
     "API"
   ],
-  "engines": {
-    "node": "14.15.5"
-  },
   "author": "Rishav Kumar Shah",
   "license": "ISC",
   "dependencies": {
